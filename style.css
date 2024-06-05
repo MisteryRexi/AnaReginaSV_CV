@@ -139,7 +139,23 @@ html{
     width: 30px; /* Ajusta el tamaño de la imagen según sea necesario */
     height: 30px;
 }
+/* CSS para el botón */
+.inicio-btn {
+    border: 2px solid green; /* Borde verde */
+    background-color: transparent; /* Fondo transparente */
+    color: green; /* Color del texto verde */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px 20px; /* Padding para el botón */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 10px; /* Margen verde alrededor del botón */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
 
+.inicio-btn:hover {
+    background-color: green; /* Fondo verde al pasar el ratón */
+    color: white; /* Color del texto blanco al pasar el ratón */
+}
 .botonesCol {
     margin-top: 10px;
     display: flex;
