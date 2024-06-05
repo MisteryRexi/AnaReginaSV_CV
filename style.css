@@ -141,9 +141,9 @@ html{
 }
 /* CSS para el botón */
 .inicio-btn {
-    border: 2px solid green; /* Borde verde */
+    border: 2px solid white; /* Borde verde */
     background-color: transparent; /* Fondo transparente */
-    color: green; /* Color del texto verde */
+    color: white; /* Color del texto verde */
     border-radius: 15px; /* Bordes redondeados */
     padding: 10px 20px; /* Padding para el botón */
     cursor: pointer; /* Cambiar el cursor al pasar por encima */
@@ -153,8 +153,8 @@ html{
 }
 
 .inicio-btn:hover {
-    background-color: green; /* Fondo verde al pasar el ratón */
-    color: white; /* Color del texto blanco al pasar el ratón */
+    background-color: rgb(112, 224, 81); /* Fondo verde al pasar el ratón */
+    color: #131517; /* Color del texto blanco al pasar el ratón */
 }
 .botonesCol {
     margin-top: 10px;
