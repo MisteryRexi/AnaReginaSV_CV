@@ -979,6 +979,17 @@ footer .arriba{
         grid-template-columns: minmax(200px, 300px) minmax(200px, 300px);
         justify-content: space-around;
     }
+    .portfolio2 ul .filtro {
+        background-color: #353c41;
+        padding: 13px 15px;
+        border-radius: 50px;
+        box-shadow: 0 5px 10px #1e2326;
+        margin-left: 10px;
+        margin-right: 10px;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 11px;
+    }
 }
 
 @media screen and (max-width:700px){
