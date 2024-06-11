@@ -957,6 +957,21 @@ footer .arriba{
         width: 400px;
         height: 78vh;
     }
+    .portfolio2 ul .filtro {
+        background-color: #353c41;
+        padding: 12px 25px;
+        border-radius: 50px;
+        box-shadow: 0 5px 10px #1e2326;
+        margin-left: 12px;
+        margin-right: 15px;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 13px;
+    }
+    .portfolio2 .filtro li {
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width:960px){

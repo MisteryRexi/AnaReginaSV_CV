@@ -48,7 +48,7 @@ let productos = document.querySelectorAll(".item-producto");
 btnFiltros.forEach(function(i){
   i.addEventListener('click', function(e){
     //quito la clase selected
-    for(i=0;i<=2;i++){
+    for(i=0;i<=3;i++){
       btnFiltros[i].classList.remove("selected");
     }
 
