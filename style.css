@@ -790,6 +790,7 @@ padding-bottom: 1px;
 }
 
 .load-more, .load-less {
+    font-family: 'Righteous';
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
