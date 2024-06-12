@@ -594,14 +594,15 @@ html{
     justify-content: center; /* Alinear los filtros horizontalmente en el centro */
 }
 
-.portfolio2 ul {
+.portfolio2 ul button{
     list-style-type: none;
+    color: #f25555;
     padding: 0;
 }
 
 .portfolio2 ul .filtro {
     font-weight: bold;
-    background-color: #353c41;
+    background-color: #383a3c; /* Fondo negro para botones no seleccionados */
     padding: 18px 30px;
     border-radius: 50px;
     box-shadow: 0 5px 10px #1e2326;
@@ -609,15 +610,49 @@ html{
     margin-right: 15px;
     cursor: pointer;
     font-size: 12px;
-    color: white;
+    color: #f25555; /* Letras rojas para botones no seleccionados */
     border: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .selected {
-    background-color: #f25555 !important;
-    color: #fcfaf7;
+    background-color: #f25555 !important; /* Fondo rojo para botón seleccionado */
+    color: white !important; /* Letras blancas para botón seleccionado */
 }
+
+.portfolio2 ul .filtro:before {
+    content: " ";
+    float: left;
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 0;
+    height: 0;
+    border-color: rgba(0,0,0,0) #252A2E rgba(0,0,0,0) rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 12px 12px 12px 0;
+}
+  
+.selected:before {
+    border-color: rgba(0,0,0,0) #383a3c rgba(0,0,0,0) rgba(0,0,0,0) !important;
+}
+  
+.portfolio2 ul .filtro:after {
+    content: " ";
+    position: absolute;
+    top: 11px;
+    left: 0;
+    float: left;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #252A2E;
+}
+  
+.selected:after {
+    background-color: #f25555 !important;
+}
+
 .portfolio2 .productos2 {
     display: grid;
     grid-template-columns: minmax(380px, 220px) minmax(380px, 220px) minmax(380px, 220px);
