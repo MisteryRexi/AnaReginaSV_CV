@@ -44,33 +44,73 @@ window.onscroll = function(){
 //FILTROS
 let btnFiltros = document.querySelectorAll(".filtro");
 let productos = document.querySelectorAll(".item-producto");
+let productsPerLoad = 3;
+let currentFilter = 'all';
+let loadCount = 0;
 
 btnFiltros.forEach(function(i){
-  i.addEventListener('click', function(e){
-    //quito la clase selected
-    for(i=0;i<=3;i++){
-      btnFiltros[i].classList.remove("selected");
-    }
+    i.addEventListener('click', function(e){
+        // quito la clase selected
+        btnFiltros.forEach(btn => btn.classList.remove("selected"));
 
-    //agrego la clase selected
-    e.target.classList.add("selected");
+        // agrego la clase selected
+        e.target.classList.add("selected");
 
-    //tomo el id que selecciono
-    var clase = e.target.id;
-
-    if(clase=="todos"){
-      productos.forEach(function(prod){
-        prod.style.display = "block";
-      })
-    }else{
-      productos.forEach(function(prod){
-        if(prod.classList.contains(clase)){
-          prod.style.display = "block";
-        }else{
-          prod.style.display = "none";
-        }
-      })
-    }
-  });
+        // tomo el id que selecciono
+        var clase = e.target.id;
+        filterProducts(clase);
+    });
 });
 
+function filterProducts(filter) {
+    currentFilter = filter;
+    loadCount = 0;
+    productos.forEach(product => {
+        product.classList.add('hidden');
+    });
+
+    const filteredProducts = filter === 'all' ? productos : document.querySelectorAll('.item-producto.' + filter);
+    filteredProducts.forEach((product, index) => {
+        if (index < productsPerLoad) {
+            product.classList.remove('hidden');
+        }
+    });
+
+    document.querySelector('.load-more').style.display = filteredProducts.length > productsPerLoad ? 'block' : 'none';
+    document.querySelector('.load-less').style.display = 'none';
+}
+
+function loadMore() {
+    loadCount++;
+    const filteredProducts = currentFilter === 'all' ? productos : document.querySelectorAll('.item-producto.' + currentFilter);
+    filteredProducts.forEach((product, index) => {
+        if (index < productsPerLoad * (loadCount + 1)) {
+            product.classList.remove('hidden');
+        }
+    });
+
+    if (productsPerLoad * (loadCount + 1) >= filteredProducts.length) {
+        document.querySelector('.load-more').style.display = 'none';
+    }
+    document.querySelector('.load-less').style.display = 'block';
+}
+
+function loadLess() {
+    if (loadCount > 0) {
+        loadCount--;
+        const filteredProducts = currentFilter === 'all' ? productos : document.querySelectorAll('.item-producto.' + currentFilter);
+        filteredProducts.forEach((product, index) => {
+            if (index >= productsPerLoad * (loadCount + 1)) {
+                product.classList.add('hidden');
+            }
+        });
+
+        if (loadCount === 0) {
+            document.querySelector('.load-less').style.display = 'none';
+        }
+        document.querySelector('.load-more').style.display = 'block';
+    }
+}
+
+// Initialize with all products
+filterProducts('all');

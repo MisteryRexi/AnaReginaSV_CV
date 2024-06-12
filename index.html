@@ -250,33 +250,32 @@
         </div>
     </section>
 
-    <!-- SECCION PORFOLIO2 -->
+    <!-- SECCION PORFOLIO -->
     <section id="portfolio2" class="portfolio2">
         <div class="contenido-seccion2">
             <h2>PORTAFOLIO</h2>
-
+    
             <div class="filtros">
                 <ul>
-                    <li class="filtro selected" id="todos">Todos</li>
-                    <li class="filtro" id="ProBas">Proyectos basicos</li>
-                    <li class="filtro" id="web">Web</li>
-                    <li class="filtro" id="OtLen">Otros lenguajes</li>
+                    <button class="filtro selected" id="all" onclick="filterProducts('all')">Todos</button>
+                    <button class="filtro" id="ProBas" onclick="filterProducts('ProBas')">Proyectos básicos</button>
+                    <button class="filtro" id="web" onclick="filterProducts('web')">Web</button>
+                    <button class="filtro" id="OtLen" onclick="filterProducts('OtLen')">Otros lenguajes</button>
                 </ul>
             </div>
-
+    
             <div class="productos2" id="productos2">
                 <div class="item-producto OtLen">
-                    <a href="https://misteryrexi.github.io/OtLenCajeroAu/"> <!-- Cambiar link para moestrar poryecto -->
+                    <a href="https://misteryrexi.github.io/OtLenCajeroAu/">
                         <img src="img/OtLenCajero.png" alt="">
                         <div class="info">
                             <div class="icono">
                                 <i><img src="img/Github.png" alt=""></i>
                             </div>
-                            <h3>Ver poryecto en Github</h3>
+                            <h3>Ver proyecto en Github</h3>
                             <p>Java | Cajero automático</p>
                         </div>
                     </a>
-                    <!-- Botones añadidos -->
                     <div class="botones">
                         <button class="js-btn" type="button"><img src="img/JSicon.png" alt="JSicon" class="icono-btn">JS</button>
                         <button class="css-btn" type="button"><img src="img/CSSicon.png" alt="CSSicon" class="icono-btn">CSS</button>
@@ -284,17 +283,16 @@
                     </div>
                 </div>
                 <div class="item-producto web">
-                    <a href="https://misteryrexi.github.io/webSemanticaHTML/"> <!-- Cambiar link para moestrar poryecto -->
+                    <a href="https://misteryrexi.github.io/webSemanticaHTML/">
                         <img src="img/SisWeb.png" alt="">
                         <div class="info">
                             <div class="icono">
                                 <i><img src="img/Github.png" alt=""></i>
                             </div>
-                            <h3>Ver poryecto en Github</h3>
+                            <h3>Ver proyecto en Github</h3>
                             <p>Semántica de HTML</p>
                         </div>
                     </a>
-                    <!-- Botones añadidos -->
                     <div class="botones">
                         <button class="js-btn" type="button"><img src="img/JSicon.png" alt="JSicon" class="icono-btn">JS</button>
                         <button class="css-btn" type="button"><img src="img/CSSicon.png" alt="CSSicon" class="icono-btn">CSS</button>
@@ -302,17 +300,16 @@
                     </div>
                 </div>
                 <div class="item-producto web">
-                    <a href="https://misteryrexi.github.io/GranNutricion_Web/"> <!-- Cambiar link para moestrar poryecto -->
+                    <a href="https://misteryrexi.github.io/GranNutricion_Web/">
                         <img src="img/GNWeb.png" alt="">
                         <div class="info">
                             <div class="icono">
                                 <i><img src="img/Github.png" alt=""></i>
                             </div>
-                            <h3>Ver poryecto en Github</h3>
-                            <p>Pagina web de nutrición</p>
+                            <h3>Ver proyecto en Github</h3>
+                            <p>Página web de nutrición</p>
                         </div>
                     </a>
-                    <!-- Botones añadidos -->
                     <div class="botones">
                         <button class="js-btn" type="button"><img src="img/JSicon.png" alt="JSicon" class="icono-btn">JS</button>
                         <button class="css-btn" type="button"><img src="img/CSSicon.png" alt="CSSicon" class="icono-btn">CSS</button>
@@ -320,17 +317,16 @@
                     </div>
                 </div>
                 <div class="item-producto ProBas">
-                    <a href="https://misteryrexi.github.io/ProBas_CalculadoraB-sica/"> <!-- Cambiar link para moestrar poryecto -->
+                    <a href="https://misteryrexi.github.io/ProBas_CalculadoraB-sica/">
                         <img src="img/CalProBas.png" alt="">
                         <div class="info">
                             <div class="icono">
                                 <i><img src="img/Github.png" alt=""></i>
                             </div>
-                            <h3>Ver poryecto en Github</h3>
-                            <p>Calculadora basica</p>
+                            <h3>Ver proyecto en Github</h3>
+                            <p>Calculadora básica</p>
                         </div>
                     </a>
-                    <!-- Botones añadidos -->
                     <div class="botones">
                         <button class="js-btn" type="button"><img src="img/JSicon.png" alt="JSicon" class="icono-btn">JS</button>
                         <button class="css-btn" type="button"><img src="img/CSSicon.png" alt="CSSicon" class="icono-btn">CSS</button>
@@ -338,8 +334,11 @@
                     </div>
                 </div>
             </div>
+            <button class="load-more" onclick="loadMore()">Cargar más</button>
+            <button class="load-less" onclick="loadLess()" style="display:none;">Cargar menos</button>
         </div>
     </section>
+    
 
     <!-- SECCION CONTACTO -->
     <section id="contacto" class="contacto">

@@ -576,7 +576,6 @@ html{
     bottom: 4px;
 }
 /* SECCION PORTFOLIO2*/
-  
 .portfolio2{
     background-color: #252A2E;
     color: #fff;
@@ -585,22 +584,21 @@ html{
 .portfolio2 .contenido-seccion2{
     max-width: 1100px;
     margin: auto;
-}
-  
+}   
 .portfolio2 .filtros {
     font-family: 'Righteous';
     color: #f25555;
     display: flex;
     align-items: center;
-    margin: 16px 0 30px; /* Añadir margen inferior para separar de los productos*/ 
+    margin: 16px 0 30px; /* Añadir margen inferior para separar de los productos */ 
     justify-content: center; /* Alinear los filtros horizontalmente en el centro */
 }
-  
+
 .portfolio2 ul {
-    display: flex;
-    list-style: none;
+    list-style-type: none;
+    padding: 0;
 }
-  
+
 .portfolio2 ul .filtro {
     font-weight: bold;
     background-color: #353c41;
@@ -611,177 +609,170 @@ html{
     margin-right: 15px;
     cursor: pointer;
     font-size: 12px;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
 }
-  
+
 .selected {
     background-color: #f25555 !important;
     color: #fcfaf7;
 }
-  
-.portfolio2 ul .filtro:before {
-    content: " ";
-    float: left;
-    position: absolute;
-    top: 0;
-    left: -12px;
-    width: 0;
-    height: 0;
-    border-color: rgba(0,0,0,0) #252A2E rgba(0,0,0,0) rgba(0,0,0,0);
-    border-style: solid;
-    border-width: 12px 12px 12px 0;
-}
-  
-.selected:before {
-    border-color: rgba(0,0,0,0) #383a3c rgba(0,0,0,0) rgba(0,0,0,0) !important;
-}
-  
-.portfolio2 ul .filtro:after {
-    content: " ";
-    position: absolute;
-    top: 11px;
-    left: 0;
-    float: left;
-    width: 4px;
-    height: 4px;
-    border-radius: 2px;
-    background-color: #252A2E;
-}
-  
-.selected:after {
-    background-color: #fff0ce !important;
-}
-  
 .portfolio2 .productos2 {
     display: grid;
     grid-template-columns: minmax(380px, 220px) minmax(380px, 220px) minmax(380px, 220px);
     justify-content: center;
     margin-bottom: 50px; /* Añadir margen inferior para separar del borde inferior de la pantalla*/ 
 }
-  
+
 .portfolio2 .productos2 .item-producto{
-    width: 95%;
-    background-color: #faf3f3;
-    padding: 4px;
-    border-radius: 30px;
-    margin-bottom: 20px; /* Reducir el margen inferior de los productos*/ 
-    cursor: pointer;
+width: 95%;
+background-color: #faf3f3;
+padding: 4px;
+border-radius: 30px;
+margin-bottom: 20px; /* Reducir el margen inferior de los productos*/ 
+cursor: pointer;
 }
-  
+
 .portfolio2 .productos2 .item-producto img {
-    width: 100%;
-    border-radius: 25px;
-    display: block; 
+width: 100%;
+border-radius: 25px;
+display: block; 
 }
-  
+
 .portfolio2 .productos2 .item-producto .info {
-    position: relative;
+position: relative;
 }
-  
+
 .portfolio2 .icono img {
-    padding: 6%;
-    display: block;
+padding: 6%;
+display: block;
 }
 .botones {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+margin-top: 10px;
+display: flex;
+justify-content: center;
 }
 
 .botones button {
-    display: flex;
-    align-items: center;
-    margin: 5px 5px;
-    padding: 1px 15px; /* Reducir padding para botones más pequeños */
-    font-size: 12px; /* Reducir tamaño de la fuente */
-    cursor: pointer;
-    border: 2px solid;
-    border-radius: 20px;
-    background-color: transparent;
-    transition: background-color 0.3s ease, color 0.3s ease;
+display: flex;
+align-items: center;
+margin: 5px 5px;
+padding: 1px 15px; /* Reducir padding para botones más pequeños */
+font-size: 12px; /* Reducir tamaño de la fuente */
+cursor: pointer;
+border: 2px solid;
+border-radius: 20px;
+background-color: transparent;
+transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .botones button img.icono-btn {
-    width: 15px; /* Tamaño más pequeño para el icono */
-    height: 15px;
-    margin-right: 0.6px; /* Reducir espacio entre el icono y el texto */
+width: 15px; /* Tamaño más pequeño para el icono */
+height: 15px;
+margin-right: 0.6px; /* Reducir espacio entre el icono y el texto */
 }
 
 /* Botón JS */
 .js-btn {
-    border-color: #F0DB4F;
-    color: #F0DB4F;
+border-color: #F0DB4F;
+color: #F0DB4F;
 }
 
 .js-btn:hover {
-    background-color: #F0DB4F;
-    color: white;
+background-color: #F0DB4F;
+color: white;
 }
 
 /* Botón CSS */
 .css-btn {
-    border-color: #2965F1;
-    color: #2965F1;
+border-color: #2965F1;
+color: #2965F1;
 }
 
 .css-btn:hover {
-    background-color: #2965F1;
-    color: white;
+background-color: #2965F1;
+color: white;
 }
 
 /* Botón HTML */
 .html-btn {
-    border-color: #E34C26;
-    color: #E34C26;
+border-color: #E34C26;
+color: #E34C26;
 }
 
 .html-btn:hover {
-    background-color: #E34C26;
-    color: white;
+background-color: #E34C26;
+color: white;
 }
-  .portfolio2 .productos2 .item-producto .info .icono {
-    width: 47px;
-    height: 47px;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    top: -28px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #faf3f3;
-    text-align: center;
-    font-size: 25px;
-    color: #959ca3;
-    transition: .3s;
-  }
-  
-  .portfolio2 .productos2 .item-producto .info h3 {
-    color: #1e2326;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Righteous';
-    font-size: 9px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
-  
+.portfolio2 .productos2 .item-producto .info .icono {
+width: 47px;
+height: 47px;
+border-radius: 50%;
+display: block;
+position: absolute;
+top: -28px;
+left: 50%;
+transform: translateX(-50%);
+background: #faf3f3;
+text-align: center;
+font-size: 25px;
+color: #959ca3;
+transition: .3s;
+}
+
+.portfolio2 .productos2 .item-producto .info h3 {
+color: #1e2326;
+text-align: center;
+text-transform: uppercase;
+font-family: 'Righteous';
+font-size: 9px;
+padding-top: 20px;
+padding-bottom: 10px;
+}
+
 .portfolio2 .productos2 .item-producto:hover .info .icono {
-    top: -45px;
+top: -45px;
 }
-  
+
 .portfolio2 h2 {
-    font-size: 48px;
-    font-family: 'Righteous';
-    text-align: center;
-    padding: 20px 0;
+font-size: 48px;
+font-family: 'Righteous';
+text-align: center;
+padding: 20px 0;
 }
 .portfolio2 p {
-    color: #1e2326;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Righteous';
-    font-size: 15px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+color: #1e2326;
+text-align: center;
+text-transform: uppercase;
+font-family: 'Righteous';
+font-size: 15px;
+padding-top: 1px;
+padding-bottom: 1px;
+}
+.hidden {
+    display: none;
+}
+
+.load-more, .load-less {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f25555;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.load-more:hover, .load-less:hover {
+    background-color: #b14141;
+}
+
+.load-less.hidden {
+    display: none;
 }
 /* SECCION CONTACTO */
 .contacto{
@@ -957,21 +948,20 @@ footer .arriba{
         width: 400px;
         height: 78vh;
     }
+    .portfolio2 ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .portfolio2 ul .filtro {
-        background-color: #353c41;
-        padding: 12px 25px;
-        border-radius: 50px;
-        box-shadow: 0 5px 10px #1e2326;
-        margin-left: 12px;
-        margin-right: 15px;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 13px;
+        padding: 8px 12px;
+        margin: 5px;
+        font-size: 10px;
+        flex: 1 1 calc(33.333% - 10px);
+        box-sizing: border-box;
+        text-align: center;
     }
-    .portfolio2 .filtro li {
-        justify-content: center;
-        align-items: center;
-    }
+    
 }
 
 @media screen and (max-width:960px){
@@ -980,15 +970,10 @@ footer .arriba{
         justify-content: space-around;
     }
     .portfolio2 ul .filtro {
-        background-color: #353c41;
-        padding: 13px 15px;
-        border-radius: 50px;
-        box-shadow: 0 5px 10px #1e2326;
-        margin-left: 10px;
-        margin-right: 10px;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 11px;
+        padding: 10px 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 10px;
     }
 }
 
@@ -1029,6 +1014,12 @@ footer .arriba{
         width: 50%;
         height: 50%;
     }
+    .portfolio2 ul .filtro {
+        padding: 10px 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width:740px){
@@ -1040,10 +1031,22 @@ footer .arriba{
         grid-template-columns: minmax(190px, 290px) minmax(190px, 290px);
         justify-content: space-between;
     }
+    .portfolio2 ul .filtro {
+        padding: 10px 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width:590px) {
     .portfolio2 .productos2{
       display: block;
+    }
+    .portfolio2 ul .filtro {
+        padding: 10px 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 10px;
     }
 }
